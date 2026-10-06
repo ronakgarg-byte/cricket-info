@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+            <label for="country">Select Country</label>
+            <select  id="country" required>
+                <option value="">Select Country</option>
+                <option value="india">India</option>
+                <option value="Australia">Australia</option>
+                <option value="South africa">South Africa</option>
+                <option value="pakistan">pakistan</option>
+            </select>
+            <label for="score">Score</label>
+            <input type="text" id="score" required>
+            <button type="button" id="addbtn">Add</button>
+            
+        </form>
+
+        <div id="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -46,46 +46,56 @@
 // },
 
 // ]
+let form = document.getElementById("cricketForm");
+
+let nameInput = document.getElementById("name");
+let countryInput = document.getElementById("country");
+let runsInput = document.getElementById("runs");
+
+let scoreList = document.getElementById("scoreList");
+
 let players = [];
 
-let input = document.getElementById("name");
-let country = document.getElementById("country");
-let runs = document.getElementById("score");
-let addBtn = document.getElementById("addbtn");
 
-addBtn.addEventListener("click", function () {
-  let playerName = input.value.trim();
-  let playerCountry = country.value;
-  let playerScore = Number(runs.value);
+form.addEventListener("submit", function(event) {
 
-  if (playerName === "" || playerCountry === "" || runs.value.trim() === "") {
-    alert("Name, country aur valid score bharo");
-    return;
-  }
+    event.preventDefault();
 
-  let player = {
-    name: playerName,
-    country: playerCountry,
-    score: playerScore,
-  };
+    let name = nameInput.value;
+    let country = countryInput.value;
+    let runs = Number(runsInput.value);
 
-  players.push(player);
-  players.sort((a, b) => b.score - a.score);
+    let player = {
+        name: name,
+        country: country,
+        runs: runs
+    };
 
-  console.log(players);
-  let results = document.getElementById("results");
+    players.push(player);
 
-results.textContent = "";
+    displayPlayers();
 
-players.forEach(function (player) {
-  let p = document.createElement("p");
+    nameInput.value = "";
+    countryInput.value = "";
+    runsInput.value = "";
 
-  p.textContent =
-    player.name + " - " + player.country + " - " + player.score;
-
-  results.appendChild(p);
 });
 
-  input.value = "";
-  runs.value = "";
-});
+
+function displayPlayers() {
+
+    scoreList.innerHTML = "";
+
+    players.forEach(function(player) {
+
+        scoreList.innerHTML += `
+            <div>
+                <h2>${player.name}</h2>
+                <p>Country: ${player.country}</p>
+                <p>Runs: ${player.runs}</p>
+            </div>
+        `;
+
+    });
+
+}

@@ -35,8 +35,6 @@ function displayPlayers() {
 
     players.forEach(function(player) {
         scoreList.innerHTML +=
-            player.name + "  " +
-            player.country + "  " +
-            player.runs + "<br>";
+        `<div class='record'><p>${player.name}</p><p>${player.country}</p><p>${player.runs}</p><\div>`;
     });
 }

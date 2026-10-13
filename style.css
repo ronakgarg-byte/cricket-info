@@ -1,12 +1,68 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
 }
-.wrapper{
-    background-image:url("vk.JPG") ;
-     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 300vh;
+.wrapper {
+  background-image: url("vk.JPG");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+#score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  position: relative;
+  width: 70vw;
+  & h1 {
+    margin-bottom: 2rem;
+    font-size: 40px;
+  }
+  & input,
+  select,
+  button {
+    padding: 8px 15px;
+    border: 1px solid rebeccapurple;
+    border-radius: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  & button {
+    cursor: pointer;
+    transition: all 500ms ease;
+  }
+  & button:hover {
+    background-color: rebeccapurple;
+    color: #fff;
+  }
+}
+#scoreList {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  display: flex;
+}
+.record{
+
+display: flex;
+flex-direction: column;
+padding: 15px;
 }

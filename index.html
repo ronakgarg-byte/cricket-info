@@ -1,40 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>Cricket Score</title>
-</head>
- <link rel="stylesheet" href="style.css">
-<body>
-<div class="wrapper">
-    <h1>Cricket Score</h1>
-   
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div class="wrapper">
+      <div id="score">
+        <h1>Cricket Score</h1>
 
-    <form id="cricketForm">
+        <form id="cricketForm">
+          <input type="text" id="name" placeholder="Enter player name" />
 
-        <input  type="text"  id="name" 
-            placeholder="Enter player name">
-
-        <select id="country">
+          <select id="country">
             <option value="">Select Country</option>
             <option value="India">India</option>
             <option value="Australia">Australia</option>
             <option value="South Africa">South Africa</option>
-        </select>
+          </select>
 
-        <input 
-            type="number" 
-            id="runs" 
-            placeholder="Enter runs"
-        >
+          <input type="number" id="runs" placeholder="Enter runs" />
 
-        <button type="submit">Add</button>
+          <button type="submit">Add</button>
+        </form>
 
-    </form>
-
-    <div id="scoreList"></div>
+        <div id="scoreList"></div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-
-</body>
+  </body>
 </html>
